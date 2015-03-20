@@ -2,14 +2,19 @@
 <html>
 <head>
   <title>Ditto</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
+  	<%= stylesheet_link_tag    'application', media: 'all' %>
+  	<%= javascript_include_tag 'application' %>
+ 	<%= javascript_include_tag "users.js" %>
+
   <script src="http://maps.google.com/maps?file=api&v=2&key=" type="text/javascript"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 <%= yield %>
+
+<fb:login-button autologoutlink="true" size="large" show-face="true"></fb:login-button>
+
 
 </body>
 </html>
